@@ -1,5 +1,8 @@
+<br>
 <div class="container">
   <h3>Cliente: <i>{{pedido.cliente}}</i></h3>
   <h4>Dirección: <i>{{pedido.direccion}}</i></h4>
+  <br>
+  <button class="btn btn-primary" (click)="agregarProducto()">Agregar Producto</button>
 </div>
-<app-pedido-detalle></app-pedido-detalle>
+<app-pedido-detalle [pedidoDetalle]="pedido.pedidoDetalle"></app-pedido-detalle>

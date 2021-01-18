@@ -4,7 +4,7 @@ export class PedidoDetalle{
   precio: number;
   total: number;
 
-  constructos(){
+  constructor(){
     this.producto = this.producto;
     this.cantidad = this.cantidad;
     this.precio = this.precio;
