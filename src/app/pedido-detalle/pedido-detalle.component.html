@@ -1,17 +1,23 @@
 <br>
 <div class="container">
-  <table class="table table-bordered">
-    <tr>
-      <th>Producto</th>
-      <th>Cantidad</th>
-      <th>Precio</th>
-      <th>Total</th>
-    </tr>
-    <tr *ngFor="let prod of pedidoDetalle">
-      <td>{{prod.producto}}</td>
-      <td>{{prod.cantidad}}</td>
-      <td>{{prod.precio}}</td>
-      <td>{{prod.total}}</td>
-    </tr>
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Total</th>
+        <th>Eliminar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prod of pedidoDetalle; let posicion = index">
+        <td>{{prod.producto}}</td>
+        <td>{{prod.cantidad}}</td>
+        <td>{{prod.precio}}</td>
+        <td>{{prod.total}}</td>
+        <td><button class="btn btn-danger" (click)="eliminar(posicion)">-</button></td>
+      </tr>
+  </tbody>
   </table>
 </div>

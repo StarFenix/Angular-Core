@@ -5,4 +5,4 @@
   <br>
   <button class="btn btn-primary" (click)="agregarProducto()">Agregar Producto</button>
 </div>
-<app-pedido-detalle [pedidoDetalle]="pedido.pedidoDetalle"></app-pedido-detalle>
+<app-pedido-detalle [pedidoDetalle]="pedido.pedidoDetalle" (eliminado)="seElimino($event)"></app-pedido-detalle>

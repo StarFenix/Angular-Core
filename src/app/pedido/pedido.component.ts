@@ -21,4 +21,9 @@ export class PedidoComponent implements OnInit {
     })
   }
 
+  seElimino(evento){
+    this.pedido.pedidoDetalle.splice(evento.id, 1)
+    console.log(evento.id)
+  }
+
 }
